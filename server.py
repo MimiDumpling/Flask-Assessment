@@ -31,9 +31,11 @@ def application_form():
 def application_success():
     """This is the confirmation page."""
 
+    value = request.form['salary']
+
     session['name'] = (request.form['firstname'] + " " + request.form['lastname'])
     session['job'] = request.form['job']
-    session['salary'] = request.form['salary']
+    session['salary'] = "${:,.2f}".format(float(value))
     
     return render_template("application-response.html")
 
