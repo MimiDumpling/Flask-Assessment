@@ -1,0 +1,14 @@
+input{
+	background-color: yellow;
+}
+
+#last{
+	font-weight: bold;
+}
+
+.border{
+	border-style: solid;
+}
+
+
+/* Your styles can go here. */

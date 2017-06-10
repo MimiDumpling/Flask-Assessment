@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="../static/styles.css">
+      <title>Application Form</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <h1>Please Fill Out This Form</h1>
+      <p>
+        This form will help us better understand your needs in job placement. Please complete the whole form. Thank you! 
+      </p>
+
+      <div>
+        <form action="/application-success" method="POST">
+          <div class="border">Please type your first name:</div>
+          <input type="text" name="firstname"><br>
+          <br>
+
+          <div class="border">Please type your last name:</div>
+          <input id="last" type="text" name="lastname"><br>
+          <br>
+
+          <div class="border">What is your salary requirement?:</div>
+          <input type="text" name="salary"><br>
+          <br>
+
+          Which position are you applying for?:
+          <select name="job">
+            {% for job in jobs %}
+              <option value="{{ job }}">{{ job }}</option>
+            {% endfor %}   
+          </select><br>
+
+          <br>
+          <input type="submit">
+        </form>
+      </div>
+    </div>
+  </body>
+
+</html>
