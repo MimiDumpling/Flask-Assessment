@@ -1,16 +1,19 @@
-<!doctype html>
-<html>
+{% extends 'base.html' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
 <head>
     <title>Homepage</title>
 </head>
 <body>
+  <div class="container-fluid">
+    <h1>Welcome! Let's find you a career!</h1>
 
-<h1>Welcome! Let's find you a career!</h1>
-
-<form action="/application-form">
-	Push the button to get started
-	<input type="submit" value="THE BUTTON">
-</form>
-
+    <form action="/application-form">
+      Push the button to get started
+      <input type="submit" value="THE BUTTON">
+    </form>
+  </div>
 </body>
-</html>
+{% endblock %}

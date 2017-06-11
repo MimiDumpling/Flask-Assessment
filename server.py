@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, session, flash
+from flask import Flask, request, render_template, session
 from flask_debugtoolbar import DebugToolbarExtension
 from jinja2 import StrictUndefined
 
